@@ -1,5 +1,7 @@
 # 🐔 Chicken Disease Classifier
 
+🌍 **Live Demo:** 👉 **[https://chicken-disease-classifier-1q0r.onrender.com](https://chicken-disease-classifier-1q0r.onrender.com)** 👈
+
 Welcome to the **Chicken Disease Classifier**! This application serves as a "virtual veterinarian" for poultry farmers and enthusiasts. By simply uploading a photo of chicken feces, the app uses Artificial Intelligence to instantly predict whether the bird is **Healthy** or showing signs of 3 common diseases: **Coccidiosis**, **Newcastle Disease**, or **Salmonella**.
 
 Whether you are a farmer looking for quick diagnostics, or an AI developer exploring modern machine learning architectures, this project is built to be accessible, fast, and easy to use with automated free deployments.
