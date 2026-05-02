@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chicken-disease-classifier
+    env: docker
+    plan: free
+    branch: main
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8000

@@ -1,0 +1,16 @@
+artifacts_root: artifacts
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: s3://my-chicken-disease-bucket/data.zip # Optional stub
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+prepare_model:
+  root_dir: artifacts/prepare_model
+  base_model_path: artifacts/prepare_model/base_model.pt
+  updated_model_path: artifacts/prepare_model/updated_model.pt
+
+training:
+  root_dir: artifacts/training
+  trained_model_path: artifacts/training/model.pt
+  metrics_path: artifacts/training/metrics.json

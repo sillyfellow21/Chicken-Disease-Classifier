@@ -1,0 +1,6 @@
+epochs: 1
+batch_size: 16
+learning_rate: 0.01
+image_size: [224, 224]
+classes: 4
+backbone: resnet18

@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+env/
+.env
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and Models (Keep the container lightweight)
+artifacts/
+archive/
+*.pt
+
+# Git
+.git/
+.gitignore
