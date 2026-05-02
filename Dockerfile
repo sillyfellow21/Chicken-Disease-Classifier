@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 # Install the Python dependencies
-# We use --no-cache-dir to keep the image size small
+# Use PyTorch CPU specifically to save massive amounts of RAM and Disk space (Fixes Render/Free Tier crashes)
+RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
