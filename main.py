@@ -8,6 +8,8 @@ import threading
 
 app = FastAPI(title="Chicken Disease Classifier")
 
+import os
+os.makedirs("static", exist_ok=True)
 # Mount static for any future CSS/JS files
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
