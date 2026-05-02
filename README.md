@@ -20,7 +20,14 @@ This application provides a simple web dashboard that you can open in your brows
 
 ---
 
-## 🛠️ Technical Details & DevOps Architecture
+## � Dataset
+
+The model is trained on the publicly available **Chicken Disease** dataset. You can view, explore, and download the original dataset on Kaggle:
+👉 **[Chicken Disease Dataset on Kaggle](https://www.kaggle.com/datasets/allandclive/chicken-disease-1)**
+
+---
+
+## �🛠️ Technical Details & DevOps Architecture
 
 Under the hood, this project is a modern, robust Deep Learning web application utilizing an entirely free hosting and CI/CD workflow.
 
