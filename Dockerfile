@@ -14,7 +14,7 @@ COPY requirements.txt .
 
 # Install the Python dependencies
 # Use PyTorch CPU specifically to save massive amounts of RAM and Disk space (Fixes Render/Free Tier crashes)
-RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir torch torchvision --extra-index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
