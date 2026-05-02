@@ -69,23 +69,32 @@ Open your web browser and go to: **[http://127.0.0.1:8000/](http://127.0.0.1:800
 
 ---
 
-## 🐳 Docker Deployment & CI/CD
+## 🐳 Docker Deployment & Free Cloud Hosting
 
-This project is entirely Dockerized. You can build it locally or let GitHub Actions handle it!
+This project is entirely Dockerized and optimized (using CPU-only PyTorch) to run efficiently on free cloud tiers. You can run it locally or deploy it alive online to show the world!
 
-### Local Docker Build:
+### Option A: Free Online Deployment (Render.com)
+Because this repository contains a `render.yaml` Infrastructure-as-Code file, deploying it for free is a 2-minute process:
+1. Create a free account at **[Render.com](https://render.com/)** and sign in with GitHub.
+2. Click **New** -> **Blueprint**.
+3. Select this GitHub repository (`Chicken-Disease-Classifier`).
+4. Keep the Blueprint Path as `render.yaml` and click **Apply**.
+
+Render will automatically provision a free server, install the optimized CPU PyTorch build to avoid Out-Of-Memory crashes, and host your application securely with an `https://` URL!
+
+### Option B: Local Docker Build
+If you want to run the isolated container on your own machine:
 ```bash
 docker build -t chicken-classifier .
 docker run -p 8000:8000 chicken-classifier
 ```
+The app will be active at `http://localhost:8000`.
 
-### Free CI/CD & Cloud Hosting:
-Every time you push to the `main` branch, **GitHub Actions** will:
-1. Lint/Check out the code.
-2. Build the Docker container automatically.
-3. Push it for free to `ghcr.io` (GitHub Container Registry).
-
-You can then host this container totally for free via services like **Hugging Face Spaces** or **Render**!
+### CI/CD Pipeline (GitHub Actions)
+Every time you push to the `main` branch, a GitHub Action automatically triggers to:
+1. Check out the latest code.
+2. Build the Docker container.
+3. Push the validated image to the **GitHub Container Registry (GHCR)** completely for free.
 
 ---
 
